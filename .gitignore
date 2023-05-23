@@ -1,0 +1,23 @@
+# Ignorar archivos y directorios generados por Docker
+.docker/
+docker-compose.yml
+docker-compose.override.yml
+run/
+var/
+.dockerignore
+.env
+
+# Ignorar archivos y directorios específicos de Laravel
+laravel/node_modules
+laravel/public/storage
+laravel/public/hot
+laravel/storage/*.key
+laravel/.env
+laravel/.env.backup
+laravel/.env.testing
+laravel/.env.dusk.local
+laravel/.phpunit.result.cache
+
+# Ignorar archivos y directorios del sistema operativo
+.DS_Store
+Thumbs.db
