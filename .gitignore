@@ -10,6 +10,9 @@ var/
 # Ignorar archivos y directorios específicos de Laravel
 laravel/
 
+# Ignorar la configuracion de nginx
+nginx/default.conf
+
 # Ignorar archivos y directorios del sistema operativo
 .DS_Store
 Thumbs.db
