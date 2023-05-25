@@ -9,6 +9,8 @@ var/
 
 # Ignorar archivos y directorios específicos de Laravel
 laravel/
+sumedico-api/
+redmed-sys/
 
 # Ignorar la configuracion de nginx
 nginx/default.conf
