@@ -57,6 +57,7 @@ services:
     working_dir: /var/www/html/laravel
     networks:
       - backend
+    command: "npm run watch"
 
 networks:
   backend:

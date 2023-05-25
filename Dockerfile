@@ -50,8 +50,8 @@ ENV PATH="/home/devuser/.composer/vendor/bin:${PATH}"
 
 USER root
 
-# Instalar Nginx
-RUN apt-get update && apt-get install -y nginx
+# Instalar Nginx y Node.js
+RUN apt-get update && apt-get install -y nginx nodejs npm
 
 # Configurar Nginx
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
@@ -62,3 +62,10 @@ RUN chmod -R 755 /var/www/html
 EXPOSE 80
 
 CMD service nginx start && php-fpm
+
+USER root
+
+RUN mkdir -p /root/.npm/_logs
+RUN chown -R devuser:devuser /root/.npm
+
+USER devuser
